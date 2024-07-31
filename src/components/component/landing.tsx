@@ -6,9 +6,12 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { JSX, SVGProps } from "react"
 import { useTranslations } from "next-intl"
+import SelectorLenguaje from "./SelectorLenguaje"
 
 export function Landing() {
   const t = useTranslations('landing');
+
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="w-full bg-gray-900 text-white py-12 md:py-8">
@@ -24,6 +27,7 @@ export function Landing() {
               <Button size="lg" className="w-full sm:w-auto bg-slate-700">
                 {t('book_visit')}
               </Button>
+              <SelectorLenguaje />
             </div>
             <img src="/placeholder.svg" width={600} height={400} alt="Museum Exterior" className="rounded-xl" />
           </div>
@@ -256,13 +260,13 @@ export function Landing() {
           </div>
           <nav className="flex items-center gap-4">
             <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            {t('privacy')}
+              {t('privacy')}
             </Link>
             <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            {t('terms')}
+              {t('terms')}
             </Link>
             <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            {t('contact')}
+              {t('contact')}
             </Link>
           </nav>
         </div>
