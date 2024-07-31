@@ -2,8 +2,12 @@ import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Prata } from '@next/font/google';
+<<<<<<< HEAD
 import "./../globals.css";
 
+=======
+import "./globals.css";
+>>>>>>> Internationalization-Module
 const prata = Prata({
     subsets: ['latin'],
     display: 'swap',
