@@ -22,7 +22,7 @@ function SelectorLenguaje() {
 
     return (
         <Select onValueChange={handleLanguageChange} value={selectedLanguage || ''}>
-            <SelectTrigger className="w-full sm:w-auto bg-slate-500 text-white">
+            <SelectTrigger className="w-full sm:w-auto bg-slate-400 text-white">
                 <SelectValue placeholder="Select Language" />
             </SelectTrigger>
             <SelectContent>

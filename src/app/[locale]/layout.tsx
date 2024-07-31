@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Prata } from '@next/font/google';
-
+import "./globals.css";
 const prata = Prata({
     subsets: ['latin'],
     display: 'swap',
