@@ -24,7 +24,7 @@ export default async function LocaleLayout({
     params: { locale: string };
 }) {
     // Providing messages for the specific locale
-    const messages = await getMessages(locale);
+    const messages = await getMessages({locale});
     return (
         <html lang={locale}>
             <body className={prata.className}>
