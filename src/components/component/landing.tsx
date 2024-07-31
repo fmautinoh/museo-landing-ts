@@ -5,8 +5,10 @@ import { Calendar } from "@/components/ui/calendar"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { JSX, SVGProps } from "react"
+import { useTranslations } from "next-intl"
 
 export function Landing() {
+  const t = useTranslations('landing');
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="w-full bg-gray-900 text-white py-12 md:py-8">
@@ -14,14 +16,13 @@ export function Landing() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-                Explore the Wonders of Our MUSAM
+                {t('explore_wonders')}
               </h1>
               <p className="text-gray-300 max-w-md">
-                Immerse yourself in our world-class collection of art, history, and culture. Book your visit today and
-                discover the treasures that await.
+                {t('immerse_yourself')}
               </p>
               <Button size="lg" className="w-full sm:w-auto bg-slate-700">
-                Book a Visit
+                {t('book_visit')}
               </Button>
             </div>
             <img src="/placeholder.svg" width={600} height={400} alt="Museum Exterior" className="rounded-xl" />
@@ -31,7 +32,7 @@ export function Landing() {
       <main className="flex-1">
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-2xl font-bold mb-8 md:mb-12">Explore Our MUSAM</h2>
+            <h2 className="text-2xl font-bold mb-8 md:mb-12">{t('explore_our_musam')}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
               <Link
                 href="#"
@@ -46,9 +47,9 @@ export function Landing() {
                   className="aspect-[4/3] object-cover"
                 />
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg font-semibold group-hover:underline">Art Gallery</h3>
+                  <h3 className="text-lg font-semibold group-hover:underline">{t('art_gallery')}</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Discover our world-renowned collection of paintings, sculptures, and installations.
+                    {t('art_gallery_desc')}
                   </p>
                 </div>
               </Link>
@@ -65,9 +66,9 @@ export function Landing() {
                   className="aspect-[4/3] object-cover"
                 />
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg font-semibold group-hover:underline">History Exhibits</h3>
+                  <h3 className="text-lg font-semibold group-hover:underline">{t('history_exhibits')}</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Explore our extensive collection of historical artifacts and interactive displays.
+                    {t('history_exhibits_desc')}
                   </p>
                 </div>
               </Link>
@@ -84,9 +85,9 @@ export function Landing() {
                   className="aspect-[4/3] object-cover"
                 />
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg font-semibold group-hover:underline">Science Center</h3>
+                  <h3 className="text-lg font-semibold group-hover:underline">{t('science_center')}</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Dive into the fascinating world of science through our interactive exhibits and demonstrations.
+                    {t('science_center_desc')}
                   </p>
                 </div>
               </Link>
@@ -103,9 +104,9 @@ export function Landing() {
                   className="aspect-[4/3] object-cover"
                 />
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg font-semibold group-hover:underline">Cultural Exhibits</h3>
+                  <h3 className="text-lg font-semibold group-hover:underline">{t('cultural_exhibits')}</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Immerse yourself in the rich cultural heritage of our diverse community.
+                    {t('cultural_exhibits_desc')}
                   </p>
                 </div>
               </Link>
@@ -122,9 +123,9 @@ export function Landing() {
                   className="aspect-[4/3] object-cover"
                 />
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg font-semibold group-hover:underline">Educational Programs</h3>
+                  <h3 className="text-lg font-semibold group-hover:underline">{t('educational_programs')}</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Explore our engaging educational programs for all ages and interests.
+                    {t('educational_programs_desc')}
                   </p>
                 </div>
               </Link>
@@ -141,9 +142,9 @@ export function Landing() {
                   className="aspect-[4/3] object-cover"
                 />
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg font-semibold group-hover:underline">Special Exhibitions</h3>
+                  <h3 className="text-lg font-semibold group-hover:underline">{t('special_exhibitions')}</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Discover our rotating selection of thought-provoking special exhibitions.
+                    {t('special_exhibitions_desc')}
                   </p>
                 </div>
               </Link>
@@ -152,16 +153,16 @@ export function Landing() {
         </section>
         <section className="bg-gray-100 dark:bg-gray-800 py-12 md:py-14">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-2xl font-bold mb-8 md:mb-12 text-gray-200">Plan Your Visit</h2>
+            <h2 className="text-2xl font-bold mb-8 md:mb-12 text-gray-200">{t('plan_your_visit')}</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-300">Book Your Visit</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-300">{t('book_your_visit')}</h3>
                 <form className="space-y-4">
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button variant="outline" className="flex-col items-start w-full h-auto">
-                        <span className="font-semibold uppercase text-[0.65rem]">Visit Date</span>
-                        <span className="font-normal">Select a date</span>
+                        <span className="font-semibold uppercase text-[0.65rem]">{t('visit_date')}</span>
+                        <span className="font-normal">{t('select_date')}</span>
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="p-0 max-w-[276px]">
@@ -171,8 +172,8 @@ export function Landing() {
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button variant="outline" className="flex-col items-start w-full h-auto">
-                        <span className="font-semibold uppercase text-[0.65rem]">Visit Time</span>
-                        <span className="font-normal">Select a time</span>
+                        <span className="font-semibold uppercase text-[0.65rem]">{t('visit_time')}</span>
+                        <span className="font-normal">{t('select_time')}</span>
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="p-0 max-w-[276px]">
@@ -198,46 +199,46 @@ export function Landing() {
                       </div>
                     </PopoverContent>
                   </Popover>
-                  <Input type="text" placeholder="Name" required />
-                  <Input type="email" placeholder="Email" required />
-                  <Textarea placeholder="Additional Information" rows={3} />
+                  <Input type="text" placeholder={t('name')} required />
+                  <Input type="email" placeholder={t('email')} required />
+                  <Textarea placeholder={t('additional_info')} rows={3} />
                   <Button type="submit" className="w-full">
-                    Book Visit
+                    {t('book_visit')}
                   </Button>
                 </form>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-300">Visitor Information</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-300">{t('visitor_info')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <ClockIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <div className="font-semibold text-gray-300">MUSAM Hours</div>
-                      <div className="text-gray-500 dark:text-gray-400">Tuesday - Sunday, 10 AM - 5 PM</div>
+                      <div className="font-semibold text-gray-300">{t('musam_hours')}</div>
+                      <div className="text-gray-500 dark:text-gray-400">{t('hours_desc')}</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <LocateIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <div className="font-semibold text-gray-300">MUSAM Location</div>
-                      <div className="text-gray-500 dark:text-gray-400">123 University Ave, Anytown USA</div>
+                      <div className="font-semibold text-gray-300">{t('musam_location')}</div>
+                      <div className="text-gray-500 dark:text-gray-400">{t('location_desc')}</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <TicketIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <div className="font-semibold text-gray-300">Admission Fees</div>
+                      <div className="font-semibold text-gray-300">{t('admission_fees')}</div>
                       <div className="text-gray-500 dark:text-gray-400">
-                        Adults: $15, Students/Seniors: $10, Children (under 12): Free
+                        {t('fees_desc')}
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <AccessibilityIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <div className="font-semibold text-gray-300">Accessibility</div>
+                      <div className="font-semibold text-gray-300">{t('accessibility')}</div>
                       <div className="text-gray-500 dark:text-gray-400">
-                        The MUSAM is wheelchair accessible and offers assistive devices.
+                        {t('accessibility_desc')}
                       </div>
                     </div>
                   </div>
@@ -255,13 +256,13 @@ export function Landing() {
           </div>
           <nav className="flex items-center gap-4">
             <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              Privacy
+            {t('privacy')}
             </Link>
             <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              Terms
+            {t('terms')}
             </Link>
             <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              Contact
+            {t('contact')}
             </Link>
           </nav>
         </div>
